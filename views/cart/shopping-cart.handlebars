@@ -1,0 +1,46 @@
+ <div class="row">
+     <h2>Shopping Cart</h2>
+       {{#if cart.items}}
+        {{#each cart}}
+           <main>
+          <div class="basket">
+            <div class="basket-labels">
+              <ul>
+                <li class="item item-heading">Item</li>
+                <li class="price">Price</li>
+              </ul>
+            </div>
+            <div class="basket-product">
+              <div class="item">
+                <div class="product-image">
+                  <img src="" alt="Placholder Image 2" class="product-frame">
+                </div>
+                <div class="product-details">
+                  <h1>{{name}}</h1>
+                  <p></p>
+                </div>
+              </div>
+              <div class="price">{{price}}</div>
+            </div>
+          </div>
+          {{/each}}
+          <aside>
+            <div class="summary">
+              <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+              <div class="summary-delivery">
+              </div>
+              <div class="summary-total">
+                <div class="total-title">Total</div>
+                <div class="total-value final-value" id="basket-total">{{cart.total}}</div>
+              </div>
+              <form class="summary-checkout" method="post" action="">
+                        <input type="submit" class="btn btn-primary" value="Go to Secure Checkout">
+                    </form>
+              </div>
+            </div>
+          </aside>
+        </main>
+       {{else}}
+        <p>No items in cart</p>
+       {{/if}}
+ </div>

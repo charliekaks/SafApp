@@ -1,0 +1,22 @@
+<div class="clearfix">
+    <div class="row">
+        {{#each books}}
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../images/book1.jpeg" alt="Card image cap" height="300" width="300">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <div class="card-text">
+                        <p>{{details}}</p> 
+                        <p>{{author}}</p>
+                        <p>{{price}}</p> </div>
+                    <form method="post" action="/shopping/{{_id}}">
+                        <input type="submit" class="btn btn-primary" value="Add To Cart">
+                    </form>
+                
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
